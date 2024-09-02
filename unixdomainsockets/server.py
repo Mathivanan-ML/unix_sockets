@@ -23,7 +23,11 @@ try:
         a=input("Enter a Msg")
         if(a=='q'):
             exit(0)
+        
         client_socket.sendall(a.encode('utf-8'))
+
+except BrokenPipeError:
+    print("Connection terminated by the client")
 except Exception as e:
     print("Client is Not Active",e)
 finally:
