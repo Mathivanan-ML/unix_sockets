@@ -10,11 +10,11 @@ client_socket.connect(socket_file)
 try:
     while(True):
         data = input()
-        if data=='q':
-            print("exited")
-            exit(0)
         try:
             client_socket.sendall(data.encode('utf-8'))
+            if data=='q':
+                print("exited")
+                break
         except BrokenPipeError:
             print("Connection broken with the client")
         response = client_socket.recv(1024)
