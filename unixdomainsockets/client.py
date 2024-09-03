@@ -1,7 +1,7 @@
 import socket
 import os
 
-socket_file = '/tmp/unix_socket'
+socket_file = '/tmp/my_socket'
 
 client_socket = socket.socket(socket.AF_UNIX, socket.SOCK_STREAM)
 

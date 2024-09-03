@@ -1,6 +1,6 @@
 import os
 import socket
-socket_file='/tmp/unix_socket'
+socket_file='/tmp/my_socket'
 if os.path.exists(socket_file):
     os.remove(socket_file)
 
